@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Data Insights by Ray</title>
+  <meta name="description" content="Schedule a strategy session or ask a question at Data Insights by Ray." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-theme="dark">
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <div class="site-shell">
+    <aside class="sidebar glass">
+      <div class="brand">
+        <div class="brand-mark">DR</div>
+        <div>
+          <p class="brand-title">Data Insights by Ray</p>
+          <p class="brand-subtitle">Business Analytics Studio</p>
+        </div>
+      </div>
+
+      <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Toggle navigation">Menu</button>
+
+      <nav class="sidebar-nav" id="sidebarNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="sidebar-actions">
+        <button id="themeToggle" class="theme-toggle">Switch Theme</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="hero panel glass">
+        <p class="eyebrow">Let us work together</p>
+        <h1>Schedule or Ask a Question</h1>
+        <p class="hero-text">Use the form to request a strategy session, workbook customization, or implementation support.</p>
+      </section>
+
+      <section class="contact-grid">
+        <article class="contact-card glass bento-card">
+          <h2>Contact Form</h2>
+          <form class="contact-form" action="#" method="post">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@company.com" required />
+
+            <label for="service">Service Interest</label>
+            <select id="service" name="service" required>
+              <option value="">Select one</option>
+              <option value="excel">Excel Workbooks</option>
+              <option value="sql">SQL Analytics</option>
+              <option value="both">Both Excel + SQL</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="message">Question or Project Goal</label>
+            <textarea id="message" name="message" rows="5" placeholder="Share your business objective, timeline, and current pain points." required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Request</button>
+          </form>
+        </article>
+
+        <article class="contact-card glass bento-card">
+          <h2>Scheduling</h2>
+          <p>Typical kickoff includes:</p>
+          <ul class="clean-list">
+            <li>30-minute discovery call</li>
+            <li>Data source review</li>
+            <li>Scope + timeline recommendation</li>
+            <li>Delivery milestones and handoff plan</li>
+          </ul>
+          <p class="meta">Response window: within 1 business day.</p>
+        </article>
+
+        <article class="contact-card glass bento-card">
+          <h2>Why Teams Reach Out</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Need</th><th>Outcome</th></tr></thead>
+              <tbody>
+                <tr><td>Manual report overload</td><td>Automated workbook flow</td></tr>
+                <tr><td>Unclear retention trends</td><td>SQL cohort tracking</td></tr>
+                <tr><td>Slow executive updates</td><td>Single-view KPI summaries</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <footer class="footer glass">
+        <p>Data Insights by Ray</p>
+        <p>From spreadsheets to SQL pipelines, built for business action.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

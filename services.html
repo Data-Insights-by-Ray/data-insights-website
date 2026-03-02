@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Data Insights by Ray</title>
+  <meta name="description" content="Excel and SQL analytics workbooks by Data Insights by Ray." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-theme="dark">
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <div class="site-shell">
+    <aside class="sidebar glass">
+      <div class="brand">
+        <div class="brand-mark">DR</div>
+        <div>
+          <p class="brand-title">Data Insights by Ray</p>
+          <p class="brand-subtitle">Business Analytics Studio</p>
+        </div>
+      </div>
+
+      <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Toggle navigation">Menu</button>
+
+      <nav class="sidebar-nav" id="sidebarNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="sidebar-actions">
+        <button id="themeToggle" class="theme-toggle">Switch Theme</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="hero panel glass">
+        <p class="eyebrow">What I Build</p>
+        <h1>Service Workbooks</h1>
+        <p class="hero-text">Choose from Excel and SQL-focused workbooks built for actionable business insights.</p>
+      </section>
+
+      <section class="service-block">
+        <div class="section-header">
+          <h2>Excel Service</h2>
+          <p>Automation-ready workbooks for finance, operations, and sales teams.</p>
+        </div>
+        <div class="workbook-grid">
+          <article class="workbook-card glass bento-card">
+            <h3>1. Sales Tracker Dashboard</h3>
+            <p>Monitors weekly revenue, unit growth, and category performance with dynamic formulas.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Week</th><th>Revenue</th><th>Growth</th></tr></thead>
+                <tbody>
+                  <tr><td>W1</td><td>$14,200</td><td>+4.1%</td></tr>
+                  <tr><td>W2</td><td>$15,010</td><td>+5.7%</td></tr>
+                  <tr><td>W3</td><td>$14,680</td><td>-2.2%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn-primary" href="workbooks/excel-sales-tracker.csv" download>Download Workbook</a>
+          </article>
+
+          <article class="workbook-card glass bento-card">
+            <h3>2. Inventory Health Monitor</h3>
+            <p>Highlights low-stock risks, reorder triggers, and overstock cost exposure.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>SKU</th><th>On Hand</th><th>Reorder Point</th></tr></thead>
+                <tbody>
+                  <tr><td>SKU-221</td><td>84</td><td>75</td></tr>
+                  <tr><td>SKU-118</td><td>41</td><td>50</td></tr>
+                  <tr><td>SKU-993</td><td>20</td><td>35</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn-primary" href="workbooks/excel-inventory-monitor.csv" download>Download Workbook</a>
+          </article>
+
+          <article class="workbook-card glass bento-card">
+            <h3>3. Budget vs Actual Analyzer</h3>
+            <p>Compares planned and actual spend by department with variance alerts.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Dept</th><th>Budget</th><th>Actual</th></tr></thead>
+                <tbody>
+                  <tr><td>Ops</td><td>$12,000</td><td>$11,740</td></tr>
+                  <tr><td>Marketing</td><td>$9,200</td><td>$9,940</td></tr>
+                  <tr><td>Sales</td><td>$15,500</td><td>$14,980</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn-primary" href="workbooks/excel-budget-vs-actual.csv" download>Download Workbook</a>
+          </article>
+
+          <article class="workbook-card glass bento-card">
+            <h3>4. Workforce Capacity Planner</h3>
+            <p>Tracks staffing utilization and project allocation to prevent delivery bottlenecks.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Team</th><th>Capacity</th><th>Allocated</th></tr></thead>
+                <tbody>
+                  <tr><td>Analysts</td><td>240h</td><td>211h</td></tr>
+                  <tr><td>Ops</td><td>180h</td><td>173h</td></tr>
+                  <tr><td>Finance</td><td>120h</td><td>97h</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn-primary" href="workbooks/excel-capacity-planner.csv" download>Download Workbook</a>
+          </article>
+
+          <article class="workbook-card glass bento-card">
+            <h3>5. KPI Executive Summary</h3>
+            <p>Single-page snapshot of top business metrics for weekly leadership meetings.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>KPI</th><th>Current</th><th>Target</th></tr></thead>
+                <tbody>
+                  <tr><td>Gross Margin</td><td>36.2%</td><td>38%</td></tr>
+                  <tr><td>Retention</td><td>91.1%</td><td>92%</td></tr>
+                  <tr><td>NPS</td><td>48</td><td>50</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn-primary" href="workbooks/excel-kpi-summary.csv" download>Download Workbook</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="service-block">
+        <div class="section-header">
+          <h2>SQL Service</h2>
+          <p>Reusable query packs for trend analysis, segmentation, and funnel diagnostics.</p>
+        </div>
+        <div class="workbook-grid">
+          <article class="workbook-card glass bento-card">
+            <h3>1. Revenue Trend Query Pack</h3>
+            <p>Monthly revenue trend analysis with seasonality checks and moving averages.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Month</th><th>Revenue</th><th>MA(3)</th></tr></thead>
+                <tbody>
+                  <tr><td>Jan</td><td>$58,200</td><td>$55,900</td></tr>
+                  <tr><td>Feb</td><td>$60,100</td><td>$57,800</td></tr>
+                  <tr><td>Mar</td><td>$62,900</td><td>$60,400</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn-primary" href="workbooks/sql-revenue-trend.csv" download>Download Workbook</a>
+          </article>
+
+          <article class="workbook-card glass bento-card">
+            <h3>2. Customer Segmentation Model</h3>
+            <p>RFM-driven SQL outputs for identifying high-value and at-risk customer groups.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Segment</th><th>Users</th><th>Avg Spend</th></tr></thead>
+                <tbody>
+                  <tr><td>Champions</td><td>320</td><td>$740</td></tr>
+                  <tr><td>Loyal</td><td>910</td><td>$380</td></tr>
+                  <tr><td>At Risk</td><td>205</td><td>$120</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn-primary" href="workbooks/sql-segmentation-model.csv" download>Download Workbook</a>
+          </article>
+
+          <article class="workbook-card glass bento-card">
+            <h3>3. Churn Signal Detector</h3>
+            <p>Flags behavior shifts and cancellation probability across subscription cohorts.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Cohort</th><th>Churn Rate</th><th>Risk Score</th></tr></thead>
+                <tbody>
+                  <tr><td>Q1</td><td>6.1%</td><td>Low</td></tr>
+                  <tr><td>Q2</td><td>8.7%</td><td>Medium</td></tr>
+                  <tr><td>Q3</td><td>11.2%</td><td>High</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn-primary" href="workbooks/sql-churn-detector.csv" download>Download Workbook</a>
+          </article>
+
+          <article class="workbook-card glass bento-card">
+            <h3>4. Funnel Conversion Analyzer</h3>
+            <p>Breaks conversion drop-off by stage, source, and campaign to reveal leakage points.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Stage</th><th>Users</th><th>Conv %</th></tr></thead>
+                <tbody>
+                  <tr><td>Visit</td><td>12,240</td><td>100%</td></tr>
+                  <tr><td>Signup</td><td>4,100</td><td>33.5%</td></tr>
+                  <tr><td>Purchase</td><td>1,540</td><td>12.6%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn-primary" href="workbooks/sql-funnel-analyzer.csv" download>Download Workbook</a>
+          </article>
+
+          <article class="workbook-card glass bento-card">
+            <h3>5. Retention Cohort Matrix</h3>
+            <p>Tracks retention performance over time and highlights intervention opportunities.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Cohort</th><th>M1</th><th>M3</th></tr></thead>
+                <tbody>
+                  <tr><td>2025-10</td><td>84%</td><td>66%</td></tr>
+                  <tr><td>2025-11</td><td>82%</td><td>63%</td></tr>
+                  <tr><td>2025-12</td><td>80%</td><td>60%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn-primary" href="workbooks/sql-retention-cohort.csv" download>Download Workbook</a>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer glass">
+        <p>Need a tailored analytics pack?</p>
+        <a href="contact.html" class="btn btn-secondary">Request Custom Scope</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
