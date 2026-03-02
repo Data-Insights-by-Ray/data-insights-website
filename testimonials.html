@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials | Data Insights by Ray</title>
+  <meta name="description" content="Client testimonials for Data Insights by Ray." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="grid-overlay"></span>
+  </div>
+
+  <div class="page-wrapper">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Data Insights by Ray home">
+          <img src="images/LOGOO.jpeg" alt="Data Insights by Ray logo" class="brand-logo" />
+          <div>
+            <p class="brand-name">Data Insights by Ray</p>
+            <p class="brand-sub">Excel and SQL Systems</p>
+          </div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">Menu</button>
+
+        <nav class="site-nav" id="siteNav">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="project-gnosis.html">Project</a>
+          <a href="testimonials.html" class="is-active">Testimonials</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="contact.html" class="button button-sm">Work With Ray</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Testimonials</p>
+            <h1>What clients say</h1>
+            <p class="lead">Only clients with a private submission link can send comments.</p>
+          </div>
+          <div id="testimonialsList" class="testimonial-grid"></div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container cta-band reveal">
+          <div>
+            <p class="eyebrow">Private submission</p>
+            <h2>Already have your private link?</h2>
+            <p>Open your unique URL to submit a testimonial.</p>
+          </div>
+          <a href="#" class="button" id="openSubmissionBtn">Open Submission Page</a>
+          <p class="form-note" id="submissionHint" hidden>Contact me for link.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="brand-name">Data Insights by Ray</p>
+          <p class="muted">Testimonials are curated and displayed on this page.</p>
+        </div>
+        <div>
+          <p><a href="admin-testimonials.html">Admin Link Tools</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/testimonials-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/testimonials.js"></script>
+</body>
+</html>
+

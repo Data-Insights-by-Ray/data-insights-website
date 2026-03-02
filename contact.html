@@ -3,108 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Data Insights by Ray</title>
-  <meta name="description" content="Schedule a strategy session or ask a question at Data Insights by Ray." />
+  <title>Contact & Booking | Data Insights by Ray</title>
+  <meta name="description" content="Book Data Insights by Ray for Excel and SQL services." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body data-theme="dark">
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
-
-  <div class="site-shell">
-    <aside class="sidebar glass">
-      <div class="brand">
-        <div class="brand-mark">DR</div>
-        <div>
-          <p class="brand-title">Data Insights by Ray</p>
-          <p class="brand-subtitle">Business Analytics Studio</p>
-        </div>
-      </div>
-
-      <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Toggle navigation">Menu</button>
-
-      <nav class="sidebar-nav" id="sidebarNav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
-      </nav>
-
-      <div class="sidebar-actions">
-        <button id="themeToggle" class="theme-toggle">Switch Theme</button>
-      </div>
-    </aside>
-
-    <main class="main-content">
-      <section class="hero panel glass">
-        <p class="eyebrow">Let us work together</p>
-        <h1>Schedule or Ask a Question</h1>
-        <p class="hero-text">Use the form to request a strategy session, workbook customization, or implementation support.</p>
-      </section>
-
-      <section class="contact-grid">
-        <article class="contact-card glass bento-card">
-          <h2>Contact Form</h2>
-          <form class="contact-form" action="#" method="post">
-            <label for="name">Full Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required />
-
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@company.com" required />
-
-            <label for="service">Service Interest</label>
-            <select id="service" name="service" required>
-              <option value="">Select one</option>
-              <option value="excel">Excel Workbooks</option>
-              <option value="sql">SQL Analytics</option>
-              <option value="both">Both Excel + SQL</option>
-              <option value="other">Other</option>
-            </select>
-
-            <label for="message">Question or Project Goal</label>
-            <textarea id="message" name="message" rows="5" placeholder="Share your business objective, timeline, and current pain points." required></textarea>
-
-            <button type="submit" class="btn btn-primary">Send Request</button>
-          </form>
-        </article>
-
-        <article class="contact-card glass bento-card">
-          <h2>Scheduling</h2>
-          <p>Typical kickoff includes:</p>
-          <ul class="clean-list">
-            <li>30-minute discovery call</li>
-            <li>Data source review</li>
-            <li>Scope + timeline recommendation</li>
-            <li>Delivery milestones and handoff plan</li>
-          </ul>
-          <p class="meta">Response window: within 1 business day.</p>
-        </article>
-
-        <article class="contact-card glass bento-card">
-          <h2>Why Teams Reach Out</h2>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Need</th><th>Outcome</th></tr></thead>
-              <tbody>
-                <tr><td>Manual report overload</td><td>Automated workbook flow</td></tr>
-                <tr><td>Unclear retention trends</td><td>SQL cohort tracking</td></tr>
-                <tr><td>Slow executive updates</td><td>Single-view KPI summaries</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
-      </section>
-
-      <footer class="footer glass">
-        <p>Data Insights by Ray</p>
-        <p>From spreadsheets to SQL pipelines, built for business action.</p>
-      </footer>
-    </main>
+<body>
+  <div class="site-bg" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="grid-overlay"></span>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <div class="page-wrapper">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Data Insights by Ray home">
+          <img src="images/LOGOO.jpeg" alt="Data Insights by Ray logo" class="brand-logo" />
+          <div>
+            <p class="brand-name">Data Insights by Ray</p>
+            <p class="brand-sub">Excel and SQL Systems</p>
+          </div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">Menu</button>
+
+        <nav class="site-nav" id="siteNav">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="project-gnosis.html">Project</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="contact.html" class="is-active">Contact</a>
+        </nav>
+
+        <a href="mailto:rodgersmhlongo23@gmail.com" class="button button-sm">Email Direct</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container contact-grid">
+          <article class="contact-card reveal">
+            <p class="eyebrow">Contact / Booking</p>
+            <h1>Send your request anytime.</h1>
+            <p class="lead">Availability: 24/7. No live scheduling tool yet - I respond manually to each request.</p>
+
+            <form id="contactForm" class="form-card">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required />
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" required />
+
+              <label for="service">Service interested in</label>
+              <select id="service" name="service" required>
+                <option value="">Choose one</option>
+                <option value="Excel">Excel</option>
+                <option value="SQL">SQL</option>
+                <option value="Other">Other</option>
+              </select>
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+
+              <button type="submit" class="button button-sm">Send Email Request</button>
+              <p class="form-note">Destination: <strong>rodgersmhlongo23@gmail.com</strong></p>
+            </form>
+          </article>
+
+          <aside class="contact-side reveal delay-1">
+            <article class="value-card">
+              <h3>Response Flow</h3>
+              <p>1. You submit request<br />2. I review scope<br />3. I reply manually with timeline and next steps</p>
+            </article>
+            <article class="value-card">
+              <h3>Typical Requests</h3>
+              <p>Workbook builds, SQL reporting, dashboard cleanups, and process automation updates.</p>
+            </article>
+            <article class="value-card">
+              <h3>Quick Pricing</h3>
+              <p>Excel workbook: <strong>R1000</strong><br />SQL report: <strong>R1500</strong></p>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="brand-name">Data Insights by Ray</p>
+          <p class="muted">24/7 availability · manual scheduling response</p>
+        </div>
+        <div>
+          <p><a href="mailto:rodgersmhlongo23@gmail.com">rodgersmhlongo23@gmail.com</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 </html>

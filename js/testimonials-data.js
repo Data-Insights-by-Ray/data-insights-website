@@ -1,0 +1,1 @@
+window.DIB_TESTIMONIALS = [];

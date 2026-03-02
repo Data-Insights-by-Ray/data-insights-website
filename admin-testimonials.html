@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Testimonial Links</title>
+  <meta name="description" content="Admin page for generating private testimonial links." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="grid-overlay"></span>
+  </div>
+
+  <div class="page-wrapper">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Data Insights by Ray home">
+          <img src="images/LOGOO.jpeg" alt="Data Insights by Ray logo" class="brand-logo" />
+          <div>
+            <p class="brand-name">Data Insights by Ray</p>
+            <p class="brand-sub">Admin Utilities</p>
+          </div>
+        </a>
+
+        <nav class="site-nav" id="siteNav">
+          <a href="index.html">Home</a>
+          <a href="testimonials.html" class="is-active">Testimonials</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container contact-grid">
+          <article class="contact-card reveal" id="adminBlocked">
+            <p class="eyebrow">Restricted</p>
+            <h1>Admin key required</h1>
+            <p class="lead">Open this page with your admin key in the URL:<br /><code>admin-testimonials.html?admin=YOUR_KEY</code></p>
+          </article>
+
+          <article class="contact-card reveal" id="adminPanel" hidden>
+            <p class="eyebrow">Admin only</p>
+            <h1>Generate private testimonial links</h1>
+            <p class="lead">Generate a token, copy the URL, and send it to a client. Only tokens in <code>js/private-links.js</code> are accepted by the form.</p>
+
+            <div class="form-card">
+              <label for="clientName">Client Label</label>
+              <input id="clientName" type="text" placeholder="Acme Team" />
+
+              <button id="generateToken" class="button button-sm" type="button">Generate Token + Link</button>
+
+              <label for="generatedToken">Generated Token</label>
+              <input id="generatedToken" type="text" readonly />
+
+              <label for="generatedLink">Private Link</label>
+              <textarea id="generatedLink" rows="3" readonly></textarea>
+
+              <button id="copyLink" class="button button-ghost button-sm" type="button">Copy Link</button>
+              <p class="form-note">After generating, add the token to <code>js/private-links.js</code> and deploy.</p>
+            </div>
+          </article>
+
+          <aside class="contact-side reveal delay-1" id="adminSide" hidden>
+            <article class="value-card">
+              <h3>Current Allowed Tokens</h3>
+              <ul id="allowedTokenList" class="token-list"></ul>
+            </article>
+            <article class="value-card">
+              <h3>Submission Destination</h3>
+              <p>All testimonial submissions are emailed to <strong>rodgersmhlongo23@gmail.com</strong>.</p>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="brand-name">Data Insights by Ray</p>
+          <p class="muted">Keep this page private and share links manually.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/private-links.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/testimonials.js"></script>
+</body>
+</html>
