@@ -1,5 +1,6 @@
-﻿(() => {
+(() => {
   initRobotIntro();
+  prefetchInternalPages();
 
   const navToggle = document.getElementById("navToggle");
   const siteNav = document.getElementById("siteNav");
@@ -7,6 +8,12 @@
   if (navToggle && siteNav) {
     navToggle.addEventListener("click", () => {
       siteNav.classList.toggle("open");
+    });
+
+    siteNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        siteNav.classList.remove("open");
+      });
     });
   }
 
@@ -93,7 +100,13 @@
   }
 
   function initRobotIntro() {
+    const isHomePage =
+      window.location.pathname.endsWith("/") ||
+      window.location.pathname.endsWith("/index.html") ||
+      window.location.pathname === "";
+    if (!isHomePage) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (window.sessionStorage.getItem("robotIntroSeen") === "1") return;
 
     const intro = document.createElement("div");
     intro.className = "robot-intro";
@@ -148,6 +161,7 @@
     const closeIntro = () => {
       if (introClosed) return;
       introClosed = true;
+      window.sessionStorage.setItem("robotIntroSeen", "1");
       intro.classList.add("is-closing");
       window.setTimeout(() => {
         cleanupScene();
@@ -170,6 +184,27 @@
     window.requestAnimationFrame(waitForReadyAndClose);
   }
 
+  function prefetchInternalPages() {
+    const links = Array.from(document.querySelectorAll("a[href]"))
+      .map((a) => a.getAttribute("href"))
+      .filter((href) => href && href.endsWith(".html"));
+    const uniqueLinks = Array.from(new Set(links)).slice(0, 12);
+
+    const injectPrefetch = () => {
+      uniqueLinks.forEach((href) => {
+        const link = document.createElement("link");
+        link.rel = "prefetch";
+        link.href = href;
+        document.head.appendChild(link);
+      });
+    };
+
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(injectPrefetch, { timeout: 1800 });
+    } else {
+      window.setTimeout(injectPrefetch, 900);
+    }
+  }
   async function enhanceRobotIntro(intro) {
     const canvas = intro.querySelector(".robot-canvas");
     const fallback = intro.querySelector(".robot-fallback");
