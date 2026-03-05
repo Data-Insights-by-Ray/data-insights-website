@@ -199,6 +199,30 @@ img {
   border-bottom: 1px solid var(--line);
 }
 
+.setrex-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.setrex-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 88% 22%, rgba(255, 199, 96, 0.24), transparent 35%),
+    radial-gradient(circle at 8% 78%, rgba(255, 255, 255, 0.08), transparent 28%);
+  pointer-events: none;
+}
+
+.setrex-hero .section-head {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+}
+
 .hero {
   padding-top: 6.4rem;
 }
@@ -482,6 +506,7 @@ h3 {
   background: linear-gradient(165deg, #ffd88f, #ffbe54);
   color: #010104;
   border-color: #ffcc74;
+  transform: translateY(-10px);
 }
 
 .price-card.popular .price-label,
@@ -503,6 +528,10 @@ h3 {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+}
+
+.price-card .button {
+  width: 100%;
 }
 
 .price-label {
