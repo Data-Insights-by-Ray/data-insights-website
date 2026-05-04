@@ -1,5 +1,4 @@
 (() => {
-  initRobotIntro();
   prefetchInternalPages();
 
   const navToggle = document.getElementById("navToggle");
